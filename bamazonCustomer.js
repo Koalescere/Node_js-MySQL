@@ -52,13 +52,14 @@ var askforID = function(res){
             validate: function(value) {
               if (isNaN(value) === false) {
                 return true;
-              }
+              } else{
               return false;
+              }  
             }    
 
           }).then(function(answer){
             if((res[i].stock_quantity.answer.quantity)>0){
-              connection.query("Updated product stock count= '" + (res[item_id].stock_quantity.answer.quantity)+ "'where id='" + idSelection + "'", function(err,res2){
+              connection.query("Updated product stock count= '" + (res[item_id].stock_quantity - answer.quantity)+ "'where id='" + idSelection + "'", function(err,res2){
                 console.log("Product ID of Purchase");
                 showTable();
               })
