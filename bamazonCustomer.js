@@ -68,7 +68,8 @@ var askforID = function(res){
               connection.query("UPDATE products SET stock_quantity= " + (res[id].stock_quantity-answer.quantity) + " where item_id=" + idSelection, function(err,res2){
                 
                 if(err){console.log(err)
-              } else { console.log("success") 
+              } else { console.log("Purchase Approved, " + " Cost is: $" + (res[id].price*answer.quantity) + "\n" + "\n") 
+
               showTable();
             };
 
@@ -79,7 +80,7 @@ var askforID = function(res){
               })
               
             }else{
-              console.log("Not a valid choice");
+              console.log("Insufficient Inventory, please change quantity or make another selection");
               askforID(res);  
             }
           })
