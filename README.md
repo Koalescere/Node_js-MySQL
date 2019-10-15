@@ -75,7 +75,11 @@ If the product is available at the appropriate quantity as specified by the user
 
 ![mysqldbTable](Node_js-MySQL/images/mysqldb_Screen Shot 2019-10-13 at 11.34.32 PM.png)
 
-![terminalScreenShot](Node_js-MySQL/images/Terminal_Screen Shot 2019-10-14 at 1.25.44 AM.png)
+![terminalScreenShot_Not_Working](Node_js-MySQL/images/Terminal_Screen Shot 2019-10-14 at 1.25.44 AM.png)
+
+![mysqldbTable_Updated_Working](Node_js-MySQL/images/SQL_WorkingScreen Shot 2019-10-14 at 10.03.22 PM.png)
+
+![terminalScreenShot_Working](Node_js-MySQL/images/CLI_Working_Screen Shot 2019-10-14 at 10.02.12 PM.png)
 
 
 App recap:
