@@ -58,9 +58,9 @@ var askforID = function(res){
             }    
 
           }).then(function(answer){
-            if((res[id].stock_quantity - answer.quantity)>0){
-              connection.query("Updated product stock count= '" + (res[id].stock_quantity - answer.quantity)+ "'where id='" + idSelection + "'", function(err,res2){
-                console.log("Product ID of Purchase");
+            if((res[id].stock_quantity-answer.quantity)>0){
+              connection.query("Updated product stock count= '" + (res[id].stock_quantity-answer.quantity)+ "'where id='" + idSelection + "'", function(err,res2){
+                console.log("Table Updated after Purchase");
                 showTable();
               })
               
@@ -70,9 +70,9 @@ var askforID = function(res){
             }
           })
         }
-      if(i==res.length && correct==false){
-        console.log("Not Valid");
-        askforID();
+        if(i==res.length && correct==false){
+          console.log("Not Valid");
+          askforID(res);
       }  
       }
     })
